@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Button
+        android:id="@+id/album_my_toggle_bt"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="내 취향 MIX             "
+        android:textSize="15sp"
+        android:textStyle="bold"/>
+
+    <ImageView
+        android:id="@+id/album_my_toggle_iv"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toEndOf="@id/album_my_toggle_bt"
+        app:layout_constraintTop_toTopOf="@id/album_my_toggle_bt"
+        app:layout_constraintBottom_toBottomOf="@id/album_my_toggle_bt"
+        android:src="@drawable/btn_toggle_off"/>
+
+    <ImageView
+        android:id="@+id/album_select_iv"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toBottomOf="@id/album_my_toggle_bt"
+        android:src="@drawable/btn_playlist_select_off"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/album_select_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/album_select_iv"
+        app:layout_constraintStart_toEndOf="@id/album_select_iv"
+        android:layout_marginStart="5dp"
+        android:text="전체선택"/>
+
+    <TextView
+        android:id="@+id/album_choice_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/album_select_iv"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="10dp"
+        android:text="전체뽑기"/>
+
+    <ImageView
+        android:id="@+id/album_choice_iv"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintTop_toBottomOf="@id/album_my_toggle_bt"
+        android:src="@drawable/icon_browse_arrow_right"
+        app:layout_constraintEnd_toStartOf="@id/album_choice_tv"
+        android:layout_marginStart="10dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/album_choice_iv"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/song_lilac_layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/song_list_order_01_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="01"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/song_list_title_1_iv"
+                    android:layout_width="30dp"
+                    android:layout_height="15dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintStart_toEndOf="@id/song_list_order_01_tv"
+                    app:layout_constraintTop_toTopOf="@id/song_list_order_01_tv"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/btn_player_related"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="라일락"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="10sp"
+                    app:layout_constraintStart_toEndOf="@id/song_list_title_1_iv"
+                    app:layout_constraintTop_toTopOf="@id/song_list_title_1_iv"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="아이유 (IU)"
+                    app:layout_constraintStart_toStartOf="@id/song_list_title_1_iv"
+                    app:layout_constraintTop_toBottomOf="@id/song_list_title_1_iv"
+                    android:textSize="10sp"/>
+
+                <ImageView
+                    android:id="@+id/song_list_title_more_iv"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:src="@drawable/btn_player_more"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintEnd_toStartOf="@id/song_list_title_more_iv"
+                    android:src="@drawable/btn_player_play"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/song_lilac_layout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/song_list_order_02_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:text="01"
+                    android:textColor="@color/black"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/song_list_title_2_iv"
+                    android:layout_width="30dp"
+                    android:layout_height="15dp"
+                    android:scaleType="fitXY"
+                    app:layout_constraintStart_toEndOf="@id/song_list_order_02_tv"
+                    app:layout_constraintTop_toTopOf="@id/song_list_order_02_tv"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/btn_player_related"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="라일락"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="10sp"
+                    app:layout_constraintStart_toEndOf="@id/song_list_title_2_iv"
+                    app:layout_constraintTop_toTopOf="@id/song_list_title_2_iv"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="아이유 (IU)"
+                    app:layout_constraintStart_toStartOf="@id/song_list_title_2_iv"
+                    app:layout_constraintTop_toBottomOf="@id/song_list_title_2_iv"
+                    android:textSize="10sp"/>
+
+                <ImageView
+                    android:id="@+id/song_list_title_more_2_iv"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:src="@drawable/btn_player_more"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="600dp"
+                    android:src="@drawable/btn_player_play"
+                    app:layout_constraintEnd_toStartOf="@id/song_list_title_more_2_iv"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
